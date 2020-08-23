@@ -23,6 +23,8 @@ extension BreedsListInteractor: BreedsListInteracting {
             guard let self = self else { return }
             self.presenter.hideLoading()
             switch result {
+            case let .success(breeds) where breeds.isEmpty:
+                self.presenter.presentErrorWithMessage(Strings.Error.Breeds.serverError)
             case let .success(breeds):
                 self.breeds = breeds
                 self.presenter.presentBreeds(breeds)

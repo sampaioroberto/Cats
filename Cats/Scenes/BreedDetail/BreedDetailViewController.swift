@@ -48,7 +48,7 @@ final class BreedDetailViewController: ViewController<BreedDetailInteracting> {
 
     private let containerView = UIView()
     
-    private lazy var tableView: UITableView = {
+    private let tableView: UITableView = {
         let view = UITableView()
         view.allowsSelection = false
         view.bounces = false
@@ -59,14 +59,14 @@ final class BreedDetailViewController: ViewController<BreedDetailInteracting> {
         return view
     }()
 
-    private lazy var containerDescriptionView: UIView = {
+    private let containerDescriptionView: UIView = {
         let view = UIView()
         view.backgroundColor = .systemIndigo
         view.rounded()
         return view
     }()
 
-    private lazy var descriptionLabel: UILabel = {
+    private let descriptionLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.font = UIFont.medium()
         label.textColor = .systemGray6
@@ -75,7 +75,7 @@ final class BreedDetailViewController: ViewController<BreedDetailInteracting> {
         return label
     }()
 
-    private lazy var containerImageView = ImageViewDownloadContainerView()
+    private let containerImageView = ImageViewDownloadContainerView()
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
