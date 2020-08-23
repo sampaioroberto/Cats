@@ -1,4 +1,9 @@
 PODS:
+  - KIF (3.7.9):
+    - KIF/Core (= 3.7.9)
+  - KIF/Core (3.7.9)
+  - KIF/IdentifierTests (3.7.9):
+    - KIF/Core
   - Kingfisher (5.14.1):
     - Kingfisher/Core (= 5.14.1)
   - Kingfisher/Core (5.14.1)
@@ -7,6 +12,8 @@ PODS:
   - SwiftLint (0.40.0)
 
 DEPENDENCIES:
+  - KIF
+  - KIF/IdentifierTests
   - Kingfisher (~> 5.0)
   - SnapKit (~> 5.0)
   - SwiftGen (~> 6.0)
@@ -14,17 +21,19 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - KIF
     - Kingfisher
     - SnapKit
     - SwiftGen
     - SwiftLint
 
 SPEC CHECKSUMS:
+  KIF: 350f96fb4205972a10e4c1a45774d48b2d8482d8
   Kingfisher: 8050bc6f7f68cbf3908bd04df7ccbac188f6d6d6
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftGen: 3d5024a47ea79e408cded20763d7a17d18a4548c
   SwiftLint: 4154893c73a4c52d6240195507eb7a3e3c64087e
 
-PODFILE CHECKSUM: 8023dc24ed8f4181335a0969957d7f5cea1f86ba
+PODFILE CHECKSUM: 7d7a57bbab013e1b15a67f6f39cc68fba01f790c
 
 COCOAPODS: 1.9.3

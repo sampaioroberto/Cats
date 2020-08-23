@@ -74,6 +74,10 @@ extension ErrorView: ViewConfiguration {
         imageView.snp.contentCompressionResistanceVerticalPriority = Layout.lowPriority
 
     }
+
+    func configureViews() {
+        accessibilityIdentifier = "ErrorView"
+    }
 }
 
 // MARK: - Private functions

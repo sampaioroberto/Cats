@@ -12,6 +12,7 @@ final class CustomCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.font = UIFont.medium(weight: .bold)
         label.textColor = .systemGray6
+        label.accessibilityIdentifier = "CustomCollectionViewCell.textLabel"
         return label
     }()
 
@@ -40,6 +41,7 @@ extension CustomCollectionViewCell: ViewConfiguration {
 
     func configureViews() {
         contentView.backgroundColor = .systemIndigo
+        accessibilityIdentifier = "CustomCollectionViewCell"
     }
 }
 

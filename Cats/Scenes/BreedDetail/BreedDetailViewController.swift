@@ -126,6 +126,7 @@ final class BreedDetailViewController: ViewController<BreedDetailInteracting> {
 
     override func configureViews() {
         view.backgroundColor = .systemGray6
+        view.accessibilityIdentifier = String(describing: BreedDetailViewController.self)
     }
 }
 

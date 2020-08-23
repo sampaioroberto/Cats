@@ -15,6 +15,7 @@ final class ImageViewDownloadContainerView: UIView {
     private let imageView: UIImageView = {
         let view = UIImageView()
         view.contentMode = .scaleAspectFit
+        view.accessibilityIdentifier = "ImageViewDownloadContainerView.imageView"
         return view
     }()
 
@@ -59,6 +60,7 @@ final class ImageViewDownloadContainerView: UIView {
             self?.startLoading()
             tryAgainCompletion()
         }
+        errorView?.accessibilityIdentifier = "ImageViewDownloadContainerView.errorView"
         imageView.removeFromSuperview()
         activityIndicatorView.removeFromSuperview()
 
