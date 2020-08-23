@@ -2,7 +2,14 @@ import Kingfisher
 import UIKit
 import SnapKit
 
+extension ImageViewDownloadContainerView.Layout {
+    static let transitionTime: TimeInterval = 1.0
+}
+
 final class ImageViewDownloadContainerView: UIView {
+    // MARK: - Properties
+    fileprivate enum Layout { }
+
     private let activityIndicatorView = UIActivityIndicatorView()
 
     private let imageView: UIImageView = {
@@ -13,6 +20,7 @@ final class ImageViewDownloadContainerView: UIView {
 
     private var errorView: ErrorView?
 
+    // MARK: - Life Cycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         startLoading()
@@ -23,6 +31,7 @@ final class ImageViewDownloadContainerView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: - Public functions
     func displayImageWithURL(_ url: URL, errorCompletion: @escaping (() -> Void)) {
         configureImageView()
 
@@ -35,7 +44,7 @@ final class ImageViewDownloadContainerView: UIView {
             options: [
                 .processor(processor),
                 .scaleFactor(UIScreen.main.scale),
-                .transition(.fade(1)),
+                .transition(.fade(Layout.transitionTime)),
                 .cacheOriginalImage
         ]) { result in
             guard case .failure = result else {
@@ -64,6 +73,7 @@ final class ImageViewDownloadContainerView: UIView {
     }
 }
 
+// MARK: - Private functions
 private extension ImageViewDownloadContainerView {
     func configureImageView() {
         errorView?.removeFromSuperview()

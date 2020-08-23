@@ -1,6 +1,14 @@
 import UIKit
+import SnapKit
+
+extension ErrorView.Layout {
+    static let lowPriority: Float = 250.0
+    static let numberOfLines = 0
+}
 
 final class ErrorView: UIView {
+    fileprivate enum Layout { }
+
     // MARK: - Properties
     private let tryAgainClosure: (() -> Void)?
 
@@ -21,7 +29,7 @@ final class ErrorView: UIView {
     private let descriptionLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.big()
-        label.numberOfLines = 0
+        label.numberOfLines = Layout.numberOfLines
         label.textAlignment = .center
         return label
     }()
@@ -63,10 +71,12 @@ extension ErrorView: ViewConfiguration {
         stackView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
-        imageView.snp.contentCompressionResistanceVerticalPriority = 250
+        imageView.snp.contentCompressionResistanceVerticalPriority = Layout.lowPriority
+
     }
 }
 
+// MARK: - Private functions
 private extension ErrorView {
     @objc func tryAgain() {
         tryAgainClosure?()

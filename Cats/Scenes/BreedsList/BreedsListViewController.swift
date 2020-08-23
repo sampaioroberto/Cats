@@ -62,6 +62,7 @@ final class BreedsListViewController: ViewController<BreedsListInteracting> {
         interactor.requestBreeds()
     }
 
+    // MARK: - View Configuration
     override func buildViewHierarchy() {
         view.addSubview(collectionView)
     }
@@ -77,6 +78,7 @@ final class BreedsListViewController: ViewController<BreedsListInteracting> {
     }
 }
 
+// MARK: - Flow Layout
 extension BreedsListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(
         _ collectionView: UICollectionView,
@@ -92,12 +94,14 @@ extension BreedsListViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
+// MARK: - UICollectionViewDelegate
 extension BreedsListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         interactor.goToBreedDetailsWithItemIndex(item: indexPath.item)
     }
 }
 
+// MARK: - Display
 extension BreedsListViewController: BreedsListDisplay {
     func displayBreedsNames(_ names: [String]) {
         var snapshot = Snapshot()

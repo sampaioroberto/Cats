@@ -2,6 +2,7 @@ import UIKit
 import SnapKit
 
 final class CustomCollectionViewCell: UICollectionViewCell {
+    // MARK: - Properties
     private let containerView: UIView = {
         let view = UIView()
         return view
@@ -14,6 +15,7 @@ final class CustomCollectionViewCell: UICollectionViewCell {
         return label
     }()
 
+    // MARK: - Public functions
     func configureWithText(_ text: String) {
         textLabel.text = text
         buildLayout()
@@ -21,6 +23,7 @@ final class CustomCollectionViewCell: UICollectionViewCell {
 }
 
 extension CustomCollectionViewCell: ViewConfiguration {
+    // MARK: - View Configuration
     func buildViewHierarchy() {
         contentView.addSubview(containerView)
         containerView.addSubview(textLabel)

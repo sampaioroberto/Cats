@@ -24,9 +24,9 @@ final class BreedDetailViewController: ViewController<BreedDetailInteracting> {
     typealias DataSource = UITableViewDiffableDataSource<Section, String>
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, String>
 
+    // MARK: - Properties
     fileprivate enum Layout { }
 
-    // MARK: - Properties
     private lazy var dataSource: DataSource = {
         let dataSource = DataSource(tableView: tableView, cellProvider: { tableview, _, text in
             let identifier = "Cell"
@@ -84,6 +84,7 @@ final class BreedDetailViewController: ViewController<BreedDetailInteracting> {
         interactor.showDetails()
     }
 
+    // MARK: - View Configuration
     override func buildViewHierarchy() {
         view.addSubview(scrollView)
         scrollView.addSubview(containerView)
@@ -128,6 +129,7 @@ final class BreedDetailViewController: ViewController<BreedDetailInteracting> {
     }
 }
 
+// MARK: - Display
 extension BreedDetailViewController: BreedDetailDisplay {
     func displayDetailsWith(name: String, description: String, attributesItems: [String]) {
         title = name
