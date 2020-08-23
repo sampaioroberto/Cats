@@ -17,7 +17,9 @@ final class BreedsListInteractor {
 
 extension BreedsListInteractor: BreedsListInteracting {
     func requestBreeds() {
+        presenter.presentLoading()
         service.requestBreeds { [weak self] result in
+            self?.presenter.hideLoading()
             switch result {
             case let .success(breeds):
                 self?.breeds = breeds

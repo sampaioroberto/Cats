@@ -3,6 +3,8 @@ import SnapKit
 
 protocol BreedsListDisplay: AnyObject {
     func displayBreedsNames(_ names: [String])
+    func displayLoading()
+    func hideLoading()
 }
 
 final class BreedsListViewController: ViewController<BreedsListInteracting> {
@@ -45,8 +47,14 @@ final class BreedsListViewController: ViewController<BreedsListInteracting> {
         return view
     }()
 
-    // MARK: - Life Cycle
+    private let activityIndicatorView: UIActivityIndicatorView = {
+        let view = UIActivityIndicatorView(style: .large)
+        view.startAnimating()
+        view.color = .black
+        return view
+    }()
 
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         interactor.requestBreeds()
@@ -88,5 +96,16 @@ extension BreedsListViewController: BreedsListDisplay {
         snapshot.appendSections([.main])
         snapshot.appendItems(names)
         dataSource.apply(snapshot, animatingDifferences: true)
+    }
+
+    func displayLoading() {
+        collectionView.backgroundView = activityIndicatorView
+        activityIndicatorView.snp.makeConstraints {
+            $0.center.equalToSuperview()
+        }
+    }
+
+    func hideLoading() {
+        collectionView.backgroundView = nil
     }
 }

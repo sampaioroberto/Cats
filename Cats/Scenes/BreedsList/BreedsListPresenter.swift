@@ -2,6 +2,8 @@ import Foundation
 
 protocol BreedsListPresenting: AnyObject {
     func presentBreedsNames(_ names: [String])
+    func presentLoading()
+    func hideLoading()
 }
 
 final class BreedsListPresenter {
@@ -16,5 +18,13 @@ final class BreedsListPresenter {
 extension BreedsListPresenter: BreedsListPresenting {
     func presentBreedsNames(_ names: [String]) {
         viewController?.displayBreedsNames(names)
+    }
+
+    func presentLoading() {
+        viewController?.displayLoading()
+    }
+
+    func hideLoading() {
+        viewController?.hideLoading()
     }
 }
