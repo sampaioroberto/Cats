@@ -1,6 +1,8 @@
 import Foundation
 
-protocol BreedsListPresenting: AnyObject { }
+protocol BreedsListPresenting: AnyObject {
+    func presentBreedsNames(_ names: [String])
+}
 
 final class BreedsListPresenter {
     private let coordinator: BreedsListCoordinating
@@ -11,4 +13,8 @@ final class BreedsListPresenter {
     }
 }
 
-extension BreedsListPresenter: BreedsListPresenting { }
+extension BreedsListPresenter: BreedsListPresenting {
+    func presentBreedsNames(_ names: [String]) {
+        viewController?.displayBreedsNames(names)
+    }
+}

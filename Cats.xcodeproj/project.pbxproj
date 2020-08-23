@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4D8F89D9D091C8A0B2E6D2AE /* Pods_Cats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB327071A0D10F63D035CDF /* Pods_Cats.framework */; };
-		AC88890D24F07B10002F94AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88890C24F07B10002F94AC /* AppDelegate.swift */; };
 		AC88890F24F07B10002F94AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88890E24F07B10002F94AC /* SceneDelegate.swift */; };
 		AC88891624F07B12002F94AC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC88891524F07B12002F94AC /* Images.xcassets */; };
 		AC88891924F07B12002F94AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC88891724F07B12002F94AC /* LaunchScreen.storyboard */; };
@@ -22,13 +21,18 @@
 		AC88897824F08B87002F94AC /* BreedsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88897724F08B87002F94AC /* BreedsListPresenter.swift */; };
 		AC88897A24F08C0F002F94AC /* BreedsListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88897924F08C0F002F94AC /* BreedsListCoordinator.swift */; };
 		AC88897C24F08D23002F94AC /* BreedsListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88897B24F08D23002F94AC /* BreedsListFactory.swift */; };
+		AC88898024F091C4002F94AC /* BreedsListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88897F24F091C4002F94AC /* BreedsListCollectionViewCell.swift */; };
+		AC88898224F09A20002F94AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88898124F09A20002F94AC /* AppDelegate.swift */; };
+		AC88898424F0A34A002F94AC /* BreedsListServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88898324F0A34A002F94AC /* BreedsListServicing.swift */; };
+		AC88898724F0A3E6002F94AC /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88898624F0A3E6002F94AC /* Breed.swift */; };
+		AC88898924F0AD42002F94AC /* View+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88898824F0AD42002F94AC /* View+CornerRadius.swift */; };
+		AC88898C24F0AEE4002F94AC /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88898B24F0AEE4002F94AC /* Spacing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		028BCE6D24119AA4AD449AFA /* Pods-Cats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cats.release.xcconfig"; path = "Target Support Files/Pods-Cats/Pods-Cats.release.xcconfig"; sourceTree = "<group>"; };
 		3AB327071A0D10F63D035CDF /* Pods_Cats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC88890924F07B10002F94AC /* Cats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cats.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC88890C24F07B10002F94AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC88890E24F07B10002F94AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AC88891524F07B12002F94AC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AC88891824F07B12002F94AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -43,6 +47,12 @@
 		AC88897724F08B87002F94AC /* BreedsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListPresenter.swift; sourceTree = "<group>"; };
 		AC88897924F08C0F002F94AC /* BreedsListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListCoordinator.swift; sourceTree = "<group>"; };
 		AC88897B24F08D23002F94AC /* BreedsListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListFactory.swift; sourceTree = "<group>"; };
+		AC88897F24F091C4002F94AC /* BreedsListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListCollectionViewCell.swift; sourceTree = "<group>"; };
+		AC88898124F09A20002F94AC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Cats/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		AC88898324F0A34A002F94AC /* BreedsListServicing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListServicing.swift; sourceTree = "<group>"; };
+		AC88898624F0A3E6002F94AC /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
+		AC88898824F0AD42002F94AC /* View+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+CornerRadius.swift"; sourceTree = "<group>"; };
+		AC88898B24F0AEE4002F94AC /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
 		DD4944DA802AA4E0F65E4A3A /* Pods-Cats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cats.debug.xcconfig"; path = "Target Support Files/Pods-Cats/Pods-Cats.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,12 +106,13 @@
 		AC88890B24F07B10002F94AC /* Cats */ = {
 			isa = PBXGroup;
 			children = (
-				AC88897024F0899A002F94AC /* Helpers */,
+				AC88898A24F0ADBA002F94AC /* Styles */,
+				AC88897024F0899A002F94AC /* BaseView */,
 				AC88894B24F087C0002F94AC /* Scenes */,
 				AC88892124F08114002F94AC /* Resources */,
-				AC88890C24F07B10002F94AC /* AppDelegate.swift */,
 				AC88890E24F07B10002F94AC /* SceneDelegate.swift */,
 				AC88891724F07B12002F94AC /* LaunchScreen.storyboard */,
+				AC88898124F09A20002F94AC /* AppDelegate.swift */,
 				AC88891A24F07B12002F94AC /* Info.plist */,
 			);
 			path = Cats;
@@ -137,22 +148,50 @@
 		AC88894C24F087CE002F94AC /* BreedsList */ = {
 			isa = PBXGroup;
 			children = (
+				AC88898524F0A3DD002F94AC /* Model */,
+				AC88897E24F091AF002F94AC /* Cell */,
 				AC88894E24F08806002F94AC /* BreedsListViewController.swift */,
 				AC88897724F08B87002F94AC /* BreedsListPresenter.swift */,
 				AC88897524F08B1F002F94AC /* BreedsListInteractor.swift */,
 				AC88897924F08C0F002F94AC /* BreedsListCoordinator.swift */,
 				AC88897B24F08D23002F94AC /* BreedsListFactory.swift */,
+				AC88898324F0A34A002F94AC /* BreedsListServicing.swift */,
 			);
 			path = BreedsList;
 			sourceTree = "<group>";
 		};
-		AC88897024F0899A002F94AC /* Helpers */ = {
+		AC88897024F0899A002F94AC /* BaseView */ = {
 			isa = PBXGroup;
 			children = (
 				AC88897124F089B2002F94AC /* ViewController.swift */,
 				AC88897324F089E6002F94AC /* ViewConfiguration.swift */,
 			);
-			path = Helpers;
+			path = BaseView;
+			sourceTree = "<group>";
+		};
+		AC88897E24F091AF002F94AC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AC88897F24F091C4002F94AC /* BreedsListCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		AC88898524F0A3DD002F94AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC88898624F0A3E6002F94AC /* Breed.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AC88898A24F0ADBA002F94AC /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				AC88898824F0AD42002F94AC /* View+CornerRadius.swift */,
+				AC88898B24F0AEE4002F94AC /* Spacing.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,15 +347,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC88898224F09A20002F94AC /* AppDelegate.swift in Sources */,
 				AC88894F24F08806002F94AC /* BreedsListViewController.swift in Sources */,
 				AC88897A24F08C0F002F94AC /* BreedsListCoordinator.swift in Sources */,
 				AC88894824F08316002F94AC /* Strings.generated.swift in Sources */,
 				AC88897624F08B1F002F94AC /* BreedsListInteractor.swift in Sources */,
-				AC88890D24F07B10002F94AC /* AppDelegate.swift in Sources */,
 				AC88897C24F08D23002F94AC /* BreedsListFactory.swift in Sources */,
 				AC88897224F089B2002F94AC /* ViewController.swift in Sources */,
+				AC88898024F091C4002F94AC /* BreedsListCollectionViewCell.swift in Sources */,
+				AC88898724F0A3E6002F94AC /* Breed.swift in Sources */,
+				AC88898924F0AD42002F94AC /* View+CornerRadius.swift in Sources */,
 				AC88897424F089E6002F94AC /* ViewConfiguration.swift in Sources */,
+				AC88898424F0A34A002F94AC /* BreedsListServicing.swift in Sources */,
 				AC88890F24F07B10002F94AC /* SceneDelegate.swift in Sources */,
+				AC88898C24F0AEE4002F94AC /* Spacing.swift in Sources */,
 				AC88894924F08316002F94AC /* Assets.generated.swift in Sources */,
 				AC88897824F08B87002F94AC /* BreedsListPresenter.swift in Sources */,
 			);
@@ -457,6 +501,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Cats/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -475,6 +520,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Cats/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
