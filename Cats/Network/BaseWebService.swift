@@ -1,6 +1,6 @@
 import Foundation
 
-struct BaseWebService: WebService {
+struct BaseWebService {
     private let timeout: TimeInterval
 
     init(timeout: TimeInterval = 20.0) {
@@ -10,12 +10,21 @@ struct BaseWebService: WebService {
     func request<T: Decodable>(
         path: Path,
         method: HTTPMethod = .get,
-        parameters: [String: Any],
+        parameters: [String: String] = [:],
         completion: @escaping (Result<T, WebServiceError>) -> Void
     ) {
         let api = API(path: path).value
 
-        guard let url = URL(string: api) else {
+        guard var components = URLComponents(string: api) else {
+            completion(.failure(.malformedURL))
+            return
+        }
+
+        components.queryItems = parameters.keys.map {
+            return URLQueryItem(name: $0, value: parameters[$0])
+        }
+
+        guard let url = components.url else {
             completion(.failure(.malformedURL))
             return
         }

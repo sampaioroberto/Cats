@@ -1,8 +1,11 @@
 import UIKit
 import SnapKit
+import Kingfisher
 
 protocol BreedDetailDisplay: AnyObject {
     func displayDetailsWith(name: String, description: String, attributesItems: [String])
+    func displayCatImageWithURL(_ url: URL)
+    func displayCatImageError()
 }
 
 private extension BreedDetailViewController.Layout {
@@ -10,6 +13,7 @@ private extension BreedDetailViewController.Layout {
     static let cellSize: CGFloat = 40.0
     static let minimunLineSpacing: CGFloat = 0.0
     static let numberOfLines = 0
+    static let imageMinHeight: CGFloat = 200.0
 }
 
 final class BreedDetailViewController: ViewController<BreedDetailInteracting> {
@@ -29,6 +33,9 @@ final class BreedDetailViewController: ViewController<BreedDetailInteracting> {
         })
         return dataSource
     }()
+
+    private let scrollView = UIScrollView()
+    private let containerView = UIView()
     
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -60,11 +67,7 @@ final class BreedDetailViewController: ViewController<BreedDetailInteracting> {
         return view
     }()
 
-    private lazy var imageView: UIImageView = {
-        let view = UIImageView()
-        view.contentMode = .scaleAspectFit
-        return view
-    }()
+    private lazy var containerImageView = ImageViewDownloadContainerView()
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -74,15 +77,26 @@ final class BreedDetailViewController: ViewController<BreedDetailInteracting> {
     }
 
     override func buildViewHierarchy() {
-        view.addSubview(containerDescriptionView)
+        view.addSubview(scrollView)
+        scrollView.addSubview(containerView)
+        containerView.addSubview(containerDescriptionView)
         containerDescriptionView.addSubview(descriptionLabel)
-        view.addSubview(collectionView)
-        view.addSubview(imageView)
+        containerView.addSubview(collectionView)
+        containerView.addSubview(containerImageView)
     }
 
     override func setupConstraints() {
+        scrollView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+
+        containerView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+            $0.width.equalToSuperview()
+        }
+
         containerDescriptionView.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(Spacing.space03)
+            $0.top.equalToSuperview().offset(Spacing.space02)
             $0.leading.trailing.equalToSuperview().inset(Spacing.space02)
         }
         descriptionLabel.snp.makeConstraints {
@@ -93,9 +107,11 @@ final class BreedDetailViewController: ViewController<BreedDetailInteracting> {
             $0.top.equalTo(descriptionLabel.snp.bottom).offset(Spacing.space02)
             $0.leading.trailing.equalToSuperview().inset(Spacing.space02)
         }
-        imageView.snp.makeConstraints {
-            $0.bottom.top.equalToSuperview().inset(Spacing.space01)
+        containerImageView.snp.makeConstraints {
+            $0.top.equalTo(collectionView.snp.bottom).offset(Spacing.space01)
             $0.leading.trailing.equalToSuperview().inset(Spacing.space02)
+            $0.bottom.equalToSuperview().offset(-Spacing.space01)
+            $0.height.greaterThanOrEqualTo(Layout.imageMinHeight)
         }
     }
 
@@ -116,6 +132,18 @@ extension BreedDetailViewController: BreedDetailDisplay {
 
         collectionView.snp.makeConstraints {
             $0.height.equalTo(Layout.cellSize * CGFloat(attributesItems.count))
+        }
+    }
+
+    func displayCatImageWithURL(_ url: URL) {
+        containerImageView.displayImageWithURL(url) { [weak self] in
+            self?.displayCatImageError()
+        }
+    }
+
+    func displayCatImageError() {
+        containerImageView.displayErrorView { [weak self] in
+            self?.interactor.requestCatImage()
         }
     }
 }

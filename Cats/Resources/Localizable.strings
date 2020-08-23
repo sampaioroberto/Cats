@@ -4,3 +4,9 @@
 "Error.tryAgain" = "Try again";
 "Error.Breeds.internetConnection" = "Meeeow, there's some internet issues. Please check if you have internet connection and try again";
 "Error.Breeds.serverError" = "Meeeow, someone stepped on our cat's tail and the cat's server stopped to work. Please try again";
+"Error.getImageError" = "Meeeow, we coudn't get the image of the kitty. Please try again.";
+
+"adaptability" = "Adaptability: %@";
+"dogFriendly" = "Dog Friendly: %@";
+"intelligence" = "Intelligence: %@";
+"energyLevel" = "Energy Level: %@";

@@ -2,6 +2,7 @@ import Foundation
 
 enum Path: String {
     case breeds
+    case images = "images/search"
 }
 
 struct API {
@@ -18,6 +19,6 @@ struct API {
     }
 
     var value: String {
-        "\(host)/\(version)/\(path)"
+        "\(host)/\(version)/\(path.rawValue)"
     }
 }
