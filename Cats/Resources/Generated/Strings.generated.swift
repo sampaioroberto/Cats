@@ -12,6 +12,15 @@ import Foundation
 internal enum Strings {
   /// Breeds
   internal static let breeds = Strings.tr("Localizable", "breeds")
+
+  internal enum Error {
+    internal enum Breeds {
+      /// Meeeow, there's some internet issues. Please check if you have internet connection and try again
+      internal static let internetConnection = Strings.tr("Localizable", "Error.Breeds.internetConnection")
+      /// Meeeow, someone stepped on our cat's tail and the cat's server stopped to work. Please try again
+      internal static let serverError = Strings.tr("Localizable", "Error.Breeds.serverError")
+    }
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

@@ -13,7 +13,6 @@ struct BaseWebService: WebService {
         parameters: [String: Any],
         completion: @escaping (Result<T, WebServiceError>) -> Void
     ) {
-
         let api = API(path: path).value
 
         guard let url = URL(string: api) else {
@@ -40,6 +39,7 @@ struct BaseWebService: WebService {
                 default:
                     completion(.failure(.unexpected))
                 }
+                return
             }
 
             guard let response = response as? HTTPURLResponse else {

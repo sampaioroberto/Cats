@@ -23,11 +23,14 @@ extension BreedsListInteractor: BreedsListInteracting {
             switch result {
             case let .success(breeds):
                 self?.breeds = breeds
-                self?.presenter.presentBreedsNames(
-                    breeds.map { $0.name }
-                )
+                self?.presenter.presentBreeds(breeds)
             case let .failure(error):
-                print(error)
+                switch error {
+                case .notConnectedToInternet, .timedOut:
+                    self?.presenter.presentErrorWithMessage(Strings.Error.Breeds.internetConnection)
+                default:
+                    self?.presenter.presentErrorWithMessage(Strings.Error.Breeds.serverError)
+                }
             }
         }
     }

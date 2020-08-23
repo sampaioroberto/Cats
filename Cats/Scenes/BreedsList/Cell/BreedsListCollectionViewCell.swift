@@ -26,7 +26,6 @@ extension CustomCollectionViewCell: ViewConfiguration {
     }
 
     func setupConstraints() {
-
         containerView.snp.makeConstraints {
             $0.edges.equalToSuperview().inset(Spacing.space01)
         }

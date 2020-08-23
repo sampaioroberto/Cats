@@ -1,9 +1,10 @@
 import Foundation
 
 protocol BreedsListPresenting: AnyObject {
-    func presentBreedsNames(_ names: [String])
+    func presentBreeds(_ breeds: [Breed])
     func presentLoading()
     func hideLoading()
+    func presentErrorWithMessage(_ message: String)
 }
 
 final class BreedsListPresenter {
@@ -16,8 +17,8 @@ final class BreedsListPresenter {
 }
 
 extension BreedsListPresenter: BreedsListPresenting {
-    func presentBreedsNames(_ names: [String]) {
-        viewController?.displayBreedsNames(names)
+    func presentBreeds(_ breeds: [Breed]) {
+        viewController?.displayBreedsNames(breeds.map { $0.name })
     }
 
     func presentLoading() {
@@ -26,5 +27,9 @@ extension BreedsListPresenter: BreedsListPresenting {
 
     func hideLoading() {
         viewController?.hideLoading()
+    }
+
+    func presentErrorWithMessage(_ message: String) {
+        viewController?.displayErrorWithMessage(message)
     }
 }
