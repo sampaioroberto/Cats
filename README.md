@@ -1,9 +1,10 @@
 # Cats
-An iOS application that shows cats breeds and some info about them
+An iOS application that shows cats breeds and some info about them.
 
 # Installation
 
 Before we open the project, we need to setup some dependencies.
+
 
 ## Bundler
 
@@ -11,16 +12,17 @@ Bundler helps with Ruby dependencies. In the case you don't have Bundler in your
 
 `gem install bundler`
 
-After that you can install the dependecies of the project executing:
+After that you can install the dependencies of the project executing:
 
 `bundle install`
 
 
 ## Cocoapods
 
-This project uses cocoapods as dependecies manager. To install all the pods using the bundler, execute:
+This project uses cocoapods as dependencies manager. To install all the pods using the bundler, execute:
 
 `bundle exec pod install`
+
 
 ## Cocoapods-keys
 
@@ -29,6 +31,8 @@ We are almost done. But, for some security, we need to set up the cats-keys by s
 `bundle exec pod keys set apiCatsSecret INSERT_YOUR_CODE_HERE`
 
 Don't forget to substitute for the key you created on https://thecatapi.com/
+
+That was all! Don't forget to open the **Cats.xcworkspace/** as we're using Cocoapods.
 
 # Images 
 | Light | Dark |
