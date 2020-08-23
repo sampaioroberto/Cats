@@ -14,6 +14,14 @@
 		AC7B5CBD24F197A100A031A5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B5CBC24F197A100A031A5 /* API.swift */; };
 		AC7B5CBF24F197D400A031A5 /* BaseWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B5CBE24F197D400A031A5 /* BaseWebService.swift */; };
 		AC7B5CC524F1B90400A031A5 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B5CC424F1B90400A031A5 /* ErrorView.swift */; };
+		AC7B5CC824F1BACA00A031A5 /* BreedDetailFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B5CC724F1BACA00A031A5 /* BreedDetailFactory.swift */; };
+		AC7B5CCA24F1BAD800A031A5 /* BreedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B5CC924F1BAD800A031A5 /* BreedDetailViewController.swift */; };
+		AC7B5CCC24F1BADF00A031A5 /* BreedDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B5CCB24F1BADF00A031A5 /* BreedDetailPresenter.swift */; };
+		AC7B5CCE24F1BAE700A031A5 /* BreedDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B5CCD24F1BAE700A031A5 /* BreedDetailCoordinator.swift */; };
+		AC7B5CD024F1BAF000A031A5 /* BreedDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B5CCF24F1BAF000A031A5 /* BreedDetailService.swift */; };
+		AC7B5CD224F1BAF700A031A5 /* BreedDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B5CD124F1BAF700A031A5 /* BreedDetailInteractor.swift */; };
+		AC7B5CD424F1C0ED00A031A5 /* DiffableDataSourceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B5CD324F1C0ED00A031A5 /* DiffableDataSourceHelper.swift */; };
+		AC7B5CD724F1C77A00A031A5 /* BreedSplitFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B5CD624F1C77A00A031A5 /* BreedSplitFactory.swift */; };
 		AC88890F24F07B10002F94AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88890E24F07B10002F94AC /* SceneDelegate.swift */; };
 		AC88891624F07B12002F94AC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC88891524F07B12002F94AC /* Images.xcassets */; };
 		AC88891924F07B12002F94AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC88891724F07B12002F94AC /* LaunchScreen.storyboard */; };
@@ -27,9 +35,9 @@
 		AC88897824F08B87002F94AC /* BreedsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88897724F08B87002F94AC /* BreedsListPresenter.swift */; };
 		AC88897A24F08C0F002F94AC /* BreedsListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88897924F08C0F002F94AC /* BreedsListCoordinator.swift */; };
 		AC88897C24F08D23002F94AC /* BreedsListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88897B24F08D23002F94AC /* BreedsListFactory.swift */; };
-		AC88898024F091C4002F94AC /* BreedsListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88897F24F091C4002F94AC /* BreedsListCollectionViewCell.swift */; };
+		AC88898024F091C4002F94AC /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88897F24F091C4002F94AC /* CustomCollectionViewCell.swift */; };
 		AC88898224F09A20002F94AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88898124F09A20002F94AC /* AppDelegate.swift */; };
-		AC88898424F0A34A002F94AC /* BreedsListServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88898324F0A34A002F94AC /* BreedsListServicing.swift */; };
+		AC88898424F0A34A002F94AC /* BreedsListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88898324F0A34A002F94AC /* BreedsListService.swift */; };
 		AC88898724F0A3E6002F94AC /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88898624F0A3E6002F94AC /* Breed.swift */; };
 		AC88898924F0AD42002F94AC /* View+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88898824F0AD42002F94AC /* View+CornerRadius.swift */; };
 		AC88898C24F0AEE4002F94AC /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88898B24F0AEE4002F94AC /* Spacing.swift */; };
@@ -44,6 +52,14 @@
 		AC7B5CBC24F197A100A031A5 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		AC7B5CBE24F197D400A031A5 /* BaseWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebService.swift; sourceTree = "<group>"; };
 		AC7B5CC424F1B90400A031A5 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		AC7B5CC724F1BACA00A031A5 /* BreedDetailFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailFactory.swift; sourceTree = "<group>"; };
+		AC7B5CC924F1BAD800A031A5 /* BreedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailViewController.swift; sourceTree = "<group>"; };
+		AC7B5CCB24F1BADF00A031A5 /* BreedDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailPresenter.swift; sourceTree = "<group>"; };
+		AC7B5CCD24F1BAE700A031A5 /* BreedDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailCoordinator.swift; sourceTree = "<group>"; };
+		AC7B5CCF24F1BAF000A031A5 /* BreedDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailService.swift; sourceTree = "<group>"; };
+		AC7B5CD124F1BAF700A031A5 /* BreedDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailInteractor.swift; sourceTree = "<group>"; };
+		AC7B5CD324F1C0ED00A031A5 /* DiffableDataSourceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableDataSourceHelper.swift; sourceTree = "<group>"; };
+		AC7B5CD624F1C77A00A031A5 /* BreedSplitFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedSplitFactory.swift; sourceTree = "<group>"; };
 		AC88890924F07B10002F94AC /* Cats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC88890E24F07B10002F94AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AC88891524F07B12002F94AC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -59,9 +75,9 @@
 		AC88897724F08B87002F94AC /* BreedsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListPresenter.swift; sourceTree = "<group>"; };
 		AC88897924F08C0F002F94AC /* BreedsListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListCoordinator.swift; sourceTree = "<group>"; };
 		AC88897B24F08D23002F94AC /* BreedsListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListFactory.swift; sourceTree = "<group>"; };
-		AC88897F24F091C4002F94AC /* BreedsListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListCollectionViewCell.swift; sourceTree = "<group>"; };
+		AC88897F24F091C4002F94AC /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		AC88898124F09A20002F94AC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Cats/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
-		AC88898324F0A34A002F94AC /* BreedsListServicing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListServicing.swift; sourceTree = "<group>"; };
+		AC88898324F0A34A002F94AC /* BreedsListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListService.swift; sourceTree = "<group>"; };
 		AC88898624F0A3E6002F94AC /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 		AC88898824F0AD42002F94AC /* View+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+CornerRadius.swift"; sourceTree = "<group>"; };
 		AC88898B24F0AEE4002F94AC /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
@@ -112,7 +128,9 @@
 		AC7B5CC224F1B8E400A031A5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AC88897F24F091C4002F94AC /* CustomCollectionViewCell.swift */,
 				AC7B5CC424F1B90400A031A5 /* ErrorView.swift */,
+				AC7B5CD324F1C0ED00A031A5 /* DiffableDataSourceHelper.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -124,6 +142,19 @@
 				AC88898B24F0AEE4002F94AC /* Spacing.swift */,
 			);
 			path = Style;
+			sourceTree = "<group>";
+		};
+		AC7B5CC624F1BAB000A031A5 /* BreedDetail */ = {
+			isa = PBXGroup;
+			children = (
+				AC7B5CC724F1BACA00A031A5 /* BreedDetailFactory.swift */,
+				AC7B5CC924F1BAD800A031A5 /* BreedDetailViewController.swift */,
+				AC7B5CCB24F1BADF00A031A5 /* BreedDetailPresenter.swift */,
+				AC7B5CCD24F1BAE700A031A5 /* BreedDetailCoordinator.swift */,
+				AC7B5CCF24F1BAF000A031A5 /* BreedDetailService.swift */,
+				AC7B5CD124F1BAF700A031A5 /* BreedDetailInteractor.swift */,
+			);
+			path = BreedDetail;
 			sourceTree = "<group>";
 		};
 		AC88890024F07B10002F94AC = {
@@ -182,7 +213,9 @@
 		AC88894B24F087C0002F94AC /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				AC7B5CC624F1BAB000A031A5 /* BreedDetail */,
 				AC88894C24F087CE002F94AC /* BreedsList */,
+				AC7B5CD624F1C77A00A031A5 /* BreedSplitFactory.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -191,13 +224,12 @@
 			isa = PBXGroup;
 			children = (
 				AC88898524F0A3DD002F94AC /* Model */,
-				AC88897E24F091AF002F94AC /* Cell */,
 				AC88894E24F08806002F94AC /* BreedsListViewController.swift */,
 				AC88897724F08B87002F94AC /* BreedsListPresenter.swift */,
 				AC88897524F08B1F002F94AC /* BreedsListInteractor.swift */,
 				AC88897924F08C0F002F94AC /* BreedsListCoordinator.swift */,
 				AC88897B24F08D23002F94AC /* BreedsListFactory.swift */,
-				AC88898324F0A34A002F94AC /* BreedsListServicing.swift */,
+				AC88898324F0A34A002F94AC /* BreedsListService.swift */,
 			);
 			path = BreedsList;
 			sourceTree = "<group>";
@@ -209,14 +241,6 @@
 				AC88897324F089E6002F94AC /* ViewConfiguration.swift */,
 			);
 			path = BaseView;
-			sourceTree = "<group>";
-		};
-		AC88897E24F091AF002F94AC /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				AC88897F24F091C4002F94AC /* BreedsListCollectionViewCell.swift */,
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		AC88898524F0A3DD002F94AC /* Model */ = {
@@ -400,17 +424,25 @@
 				AC88897C24F08D23002F94AC /* BreedsListFactory.swift in Sources */,
 				AC7B5CB924F1976100A031A5 /* WebServiceError.swift in Sources */,
 				AC88897224F089B2002F94AC /* ViewController.swift in Sources */,
-				AC88898024F091C4002F94AC /* BreedsListCollectionViewCell.swift in Sources */,
+				AC88898024F091C4002F94AC /* CustomCollectionViewCell.swift in Sources */,
 				AC88898724F0A3E6002F94AC /* Breed.swift in Sources */,
 				AC88898924F0AD42002F94AC /* View+CornerRadius.swift in Sources */,
+				AC7B5CCE24F1BAE700A031A5 /* BreedDetailCoordinator.swift in Sources */,
+				AC7B5CC824F1BACA00A031A5 /* BreedDetailFactory.swift in Sources */,
 				AC88897424F089E6002F94AC /* ViewConfiguration.swift in Sources */,
+				AC7B5CD424F1C0ED00A031A5 /* DiffableDataSourceHelper.swift in Sources */,
 				AC7B5CBD24F197A100A031A5 /* API.swift in Sources */,
-				AC88898424F0A34A002F94AC /* BreedsListServicing.swift in Sources */,
+				AC88898424F0A34A002F94AC /* BreedsListService.swift in Sources */,
 				AC88890F24F07B10002F94AC /* SceneDelegate.swift in Sources */,
 				AC88898C24F0AEE4002F94AC /* Spacing.swift in Sources */,
 				AC88894924F08316002F94AC /* Assets.generated.swift in Sources */,
 				AC88897824F08B87002F94AC /* BreedsListPresenter.swift in Sources */,
+				AC7B5CCA24F1BAD800A031A5 /* BreedDetailViewController.swift in Sources */,
+				AC7B5CCC24F1BADF00A031A5 /* BreedDetailPresenter.swift in Sources */,
 				AC7B5CC524F1B90400A031A5 /* ErrorView.swift in Sources */,
+				AC7B5CD224F1BAF700A031A5 /* BreedDetailInteractor.swift in Sources */,
+				AC7B5CD724F1C77A00A031A5 /* BreedSplitFactory.swift in Sources */,
+				AC7B5CD024F1BAF000A031A5 /* BreedDetailService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

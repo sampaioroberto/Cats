@@ -5,6 +5,7 @@ protocol BreedsListPresenting: AnyObject {
     func presentLoading()
     func hideLoading()
     func presentErrorWithMessage(_ message: String)
+    func presentDetailsWithBreed(_ breed: Breed)
 }
 
 final class BreedsListPresenter {
@@ -31,5 +32,9 @@ extension BreedsListPresenter: BreedsListPresenting {
 
     func presentErrorWithMessage(_ message: String) {
         viewController?.displayErrorWithMessage(message)
+    }
+
+    func presentDetailsWithBreed(_ breed: Breed) {
+        coordinator.showDetailsWithBreed(breed)
     }
 }

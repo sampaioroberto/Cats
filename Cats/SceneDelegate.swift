@@ -4,6 +4,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
+    let splitFactory = BreedsSplitFactory()
+
     func scene(
         _ scene: UIScene,
         willConnectTo session: UISceneSession,
@@ -12,7 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
 
         self.window = window
-        window.rootViewController = BreedsListFactory().make()
+        window.rootViewController = splitFactory.make()
         window.makeKeyAndVisible()
     }
 }

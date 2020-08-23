@@ -9,14 +9,6 @@ protocol BreedsListDisplay: AnyObject {
 }
 
 final class BreedsListViewController: ViewController<BreedsListInteracting> {
-
-    private enum Section {
-      case main
-    }
-    
-    private typealias DataSource = UICollectionViewDiffableDataSource<Section, String>
-    private typealias Snapshot = NSDiffableDataSourceSnapshot<Section, String>
-
     // MARK: - Properties
     private lazy var dataSource: DataSource = {
         let dataSource = DataSource(
@@ -26,7 +18,8 @@ final class BreedsListViewController: ViewController<BreedsListInteracting> {
                 withReuseIdentifier: String(describing: CustomCollectionViewCell.self
                 ),
                 for: indexPath) as? CustomCollectionViewCell
-              cell?.configureWithText(text)
+            cell?.rounded()
+            cell?.configureWithText(text)
             return cell
         })
         return dataSource
@@ -58,6 +51,7 @@ final class BreedsListViewController: ViewController<BreedsListInteracting> {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = Strings.breeds
         interactor.requestBreeds()
     }
 
@@ -88,6 +82,12 @@ extension BreedsListViewController: UICollectionViewDelegateFlowLayout {
             bottom: Spacing.space02,
             right: Spacing.space02
         )
+    }
+}
+
+extension BreedsListViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        interactor.goToBreedDetailsWithItemIndex(item: indexPath.item)
     }
 }
 

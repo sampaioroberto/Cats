@@ -7,6 +7,8 @@ final class BreedsListFactory {
         let service = BreedsListService()
         let interactor = BreedsListInteractor(presenter: presenter, service: service)
         let viewController = BreedsListViewController(interactor: interactor)
+
+        coordinator.viewController = viewController
         presenter.viewController = viewController
 
         return viewController

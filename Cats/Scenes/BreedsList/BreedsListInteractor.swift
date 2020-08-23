@@ -2,6 +2,7 @@ import Foundation
 
 protocol BreedsListInteracting: AnyObject {
     func requestBreeds()
+    func goToBreedDetailsWithItemIndex(item: Int)
 }
 
 final class BreedsListInteractor {
@@ -34,5 +35,10 @@ extension BreedsListInteractor: BreedsListInteracting {
                 }
             }
         }
+    }
+
+    func goToBreedDetailsWithItemIndex(item: Int) {
+        let breed = breeds[item]
+        presenter.presentDetailsWithBreed(breed)
     }
 }

@@ -36,6 +36,11 @@ extension CustomCollectionViewCell: ViewConfiguration {
 
     func configureViews() {
         contentView.backgroundColor = .lightGray
+    }
+}
+
+extension CustomCollectionViewCell {
+    override func rounded() {
         contentView.rounded()
     }
 }
