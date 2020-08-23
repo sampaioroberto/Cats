@@ -20,7 +20,6 @@
 		AC7B5CCC24F1BADF00A031A5 /* BreedDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B5CCB24F1BADF00A031A5 /* BreedDetailPresenter.swift */; };
 		AC7B5CD024F1BAF000A031A5 /* BreedDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B5CCF24F1BAF000A031A5 /* BreedDetailService.swift */; };
 		AC7B5CD224F1BAF700A031A5 /* BreedDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B5CD124F1BAF700A031A5 /* BreedDetailInteractor.swift */; };
-		AC7B5CD424F1C0ED00A031A5 /* DiffableDataSourceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B5CD324F1C0ED00A031A5 /* DiffableDataSourceHelper.swift */; };
 		AC7B5CD724F1C77A00A031A5 /* BreedSplitFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B5CD624F1C77A00A031A5 /* BreedSplitFactory.swift */; };
 		AC88890F24F07B10002F94AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88890E24F07B10002F94AC /* SceneDelegate.swift */; };
 		AC88891624F07B12002F94AC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC88891524F07B12002F94AC /* Images.xcassets */; };
@@ -60,7 +59,6 @@
 		AC7B5CCB24F1BADF00A031A5 /* BreedDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailPresenter.swift; sourceTree = "<group>"; };
 		AC7B5CCF24F1BAF000A031A5 /* BreedDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailService.swift; sourceTree = "<group>"; };
 		AC7B5CD124F1BAF700A031A5 /* BreedDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailInteractor.swift; sourceTree = "<group>"; };
-		AC7B5CD324F1C0ED00A031A5 /* DiffableDataSourceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableDataSourceHelper.swift; sourceTree = "<group>"; };
 		AC7B5CD624F1C77A00A031A5 /* BreedSplitFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedSplitFactory.swift; sourceTree = "<group>"; };
 		AC88890924F07B10002F94AC /* Cats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC88890E24F07B10002F94AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 			children = (
 				AC88897F24F091C4002F94AC /* CustomCollectionViewCell.swift */,
 				AC7B5CC424F1B90400A031A5 /* ErrorView.swift */,
-				AC7B5CD324F1C0ED00A031A5 /* DiffableDataSourceHelper.swift */,
 				AC1692E024F1E80D009114C2 /* ImageViewDownloadContainerView.swift */,
 			);
 			path = View;
@@ -443,7 +440,6 @@
 				AC88898924F0AD42002F94AC /* View+CornerRadius.swift in Sources */,
 				AC7B5CC824F1BACA00A031A5 /* BreedDetailFactory.swift in Sources */,
 				AC88897424F089E6002F94AC /* ViewConfiguration.swift in Sources */,
-				AC7B5CD424F1C0ED00A031A5 /* DiffableDataSourceHelper.swift in Sources */,
 				AC7B5CBD24F197A100A031A5 /* API.swift in Sources */,
 				ACF6824124F1D9A800853181 /* ImageResponse.swift in Sources */,
 				ACF6823F24F1D93A00853181 /* WebService.swift in Sources */,

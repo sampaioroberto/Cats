@@ -17,18 +17,28 @@ private extension BreedDetailViewController.Layout {
 }
 
 final class BreedDetailViewController: ViewController<BreedDetailInteracting> {
+    enum Section {
+      case main
+    }
+
+    typealias DataSource = UITableViewDiffableDataSource<Section, String>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<Section, String>
+
     fileprivate enum Layout { }
 
     // MARK: - Properties
     private lazy var dataSource: DataSource = {
-        let dataSource = DataSource(
-            collectionView: collectionView,
-            cellProvider: { (collectionView, indexPath, text) -> UICollectionViewCell? in
-            let cell = collectionView.dequeueReusableCell(
-                withReuseIdentifier: String(describing: CustomCollectionViewCell.self
-                ),
-                for: indexPath) as? CustomCollectionViewCell
-              cell?.configureWithText(text)
+        let dataSource = DataSource(tableView: tableView, cellProvider: { tableview, _, text in
+            let identifier = "Cell"
+            var cell: UITableViewCell?
+            cell = tableview.dequeueReusableCell(withIdentifier: identifier)
+            if cell == nil {
+                cell = UITableViewCell(style: .default, reuseIdentifier: identifier)
+            }
+            cell?.textLabel?.text = text
+            cell?.textLabel?.font = UIFont.medium(weight: .bold)
+            cell?.textLabel?.textColor = .systemGray6
+            cell?.backgroundColor = .systemIndigo
             return cell
         })
         return dataSource
@@ -38,20 +48,14 @@ final class BreedDetailViewController: ViewController<BreedDetailInteracting> {
 
     private let containerView = UIView()
     
-    private lazy var collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: view.bounds.width - 2*Spacing.space02, height: Layout.cellSize)
-        layout.minimumLineSpacing = Layout.minimunLineSpacing
-
-        let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        view.register(
-            CustomCollectionViewCell.self,
-            forCellWithReuseIdentifier: String(describing: CustomCollectionViewCell.self)
-        )
+    private lazy var tableView: UITableView = {
+        let view = UITableView()
         view.allowsSelection = false
         view.bounces = false
         view.rounded()
-        view.backgroundColor = .systemGray6
+        view.backgroundColor = .systemIndigo
+        view.separatorStyle = .none
+        view.rowHeight = Layout.cellSize
         return view
     }()
 
@@ -85,7 +89,7 @@ final class BreedDetailViewController: ViewController<BreedDetailInteracting> {
         scrollView.addSubview(containerView)
         containerView.addSubview(containerDescriptionView)
         containerDescriptionView.addSubview(descriptionLabel)
-        containerView.addSubview(collectionView)
+        containerView.addSubview(tableView)
         containerView.addSubview(containerImageView)
     }
 
@@ -107,12 +111,12 @@ final class BreedDetailViewController: ViewController<BreedDetailInteracting> {
             $0.top.bottom.equalToSuperview().inset(Spacing.space01)
             $0.leading.trailing.equalToSuperview().inset(Spacing.space02)
         }
-        collectionView.snp.makeConstraints {
+        tableView.snp.makeConstraints {
             $0.top.equalTo(descriptionLabel.snp.bottom).offset(Spacing.space02)
             $0.leading.trailing.equalToSuperview().inset(Spacing.space02)
         }
         containerImageView.snp.makeConstraints {
-            $0.top.equalTo(collectionView.snp.bottom).offset(Spacing.space01)
+            $0.top.equalTo(tableView.snp.bottom).offset(Spacing.space01)
             $0.leading.trailing.equalToSuperview().inset(Spacing.space02)
             $0.bottom.equalToSuperview().offset(-Spacing.space01)
             $0.height.greaterThanOrEqualTo(Layout.imageMinHeight)
@@ -134,7 +138,7 @@ extension BreedDetailViewController: BreedDetailDisplay {
         snapshot.appendItems(attributesItems)
         dataSource.apply(snapshot, animatingDifferences: false)
 
-        collectionView.snp.makeConstraints {
+        tableView.snp.makeConstraints {
             $0.height.equalTo(Layout.cellSize * CGFloat(attributesItems.count))
         }
     }

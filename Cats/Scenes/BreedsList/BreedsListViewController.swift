@@ -9,6 +9,13 @@ protocol BreedsListDisplay: AnyObject {
 }
 
 final class BreedsListViewController: ViewController<BreedsListInteracting> {
+    enum Section {
+      case main
+    }
+
+    typealias DataSource = UICollectionViewDiffableDataSource<Section, String>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<Section, String>
+
     // MARK: - Properties
     private lazy var dataSource: DataSource = {
         let dataSource = DataSource(
