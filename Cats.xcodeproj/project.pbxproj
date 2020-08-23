@@ -26,6 +26,8 @@
 		AC7B8D6024F2D9C100BCE7A7 /* BreedsListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B8D5F24F2D9C100BCE7A7 /* BreedsListPresenterTests.swift */; };
 		AC7B8D6224F2DCCE00BCE7A7 /* BreedsListCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B8D6124F2DCCE00BCE7A7 /* BreedsListCoordinatorTests.swift */; };
 		AC7B8D6524F2DE5100BCE7A7 /* ViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B8D6424F2DE5100BCE7A7 /* ViewControllerSpy.swift */; };
+		AC7B8D6924F2E06300BCE7A7 /* BreedDetailInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B8D6824F2E06300BCE7A7 /* BreedDetailInteractorTests.swift */; };
+		AC7B8D6B24F2E48500BCE7A7 /* BreedDetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B8D6A24F2E48500BCE7A7 /* BreedDetailPresenterTests.swift */; };
 		AC88890F24F07B10002F94AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88890E24F07B10002F94AC /* SceneDelegate.swift */; };
 		AC88891624F07B12002F94AC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC88891524F07B12002F94AC /* Images.xcassets */; };
 		AC88891924F07B12002F94AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC88891724F07B12002F94AC /* LaunchScreen.storyboard */; };
@@ -82,6 +84,8 @@
 		AC7B8D5F24F2D9C100BCE7A7 /* BreedsListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListPresenterTests.swift; sourceTree = "<group>"; };
 		AC7B8D6124F2DCCE00BCE7A7 /* BreedsListCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListCoordinatorTests.swift; sourceTree = "<group>"; };
 		AC7B8D6424F2DE5100BCE7A7 /* ViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSpy.swift; sourceTree = "<group>"; };
+		AC7B8D6824F2E06300BCE7A7 /* BreedDetailInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailInteractorTests.swift; sourceTree = "<group>"; };
+		AC7B8D6A24F2E48500BCE7A7 /* BreedDetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailPresenterTests.swift; sourceTree = "<group>"; };
 		AC88890924F07B10002F94AC /* Cats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC88890E24F07B10002F94AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AC88891524F07B12002F94AC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -202,6 +206,7 @@
 		AC7B8D3C24F2CAEF00BCE7A7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				AC7B8D6724F2E04A00BCE7A7 /* BreedDetail */,
 				AC7B8D3D24F2CAFA00BCE7A7 /* BreedsList */,
 			);
 			path = Scenes;
@@ -223,6 +228,15 @@
 				AC7B8D6424F2DE5100BCE7A7 /* ViewControllerSpy.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		AC7B8D6724F2E04A00BCE7A7 /* BreedDetail */ = {
+			isa = PBXGroup;
+			children = (
+				AC7B8D6824F2E06300BCE7A7 /* BreedDetailInteractorTests.swift */,
+				AC7B8D6A24F2E48500BCE7A7 /* BreedDetailPresenterTests.swift */,
+			);
+			path = BreedDetail;
 			sourceTree = "<group>";
 		};
 		AC88890024F07B10002F94AC = {
@@ -526,6 +540,8 @@
 				AC7B8D6524F2DE5100BCE7A7 /* ViewControllerSpy.swift in Sources */,
 				AC7B8D5E24F2CB4000BCE7A7 /* BreedsListInteractorTests.swift in Sources */,
 				AC7B8D6224F2DCCE00BCE7A7 /* BreedsListCoordinatorTests.swift in Sources */,
+				AC7B8D6924F2E06300BCE7A7 /* BreedDetailInteractorTests.swift in Sources */,
+				AC7B8D6B24F2E48500BCE7A7 /* BreedDetailPresenterTests.swift in Sources */,
 				AC7B8D6024F2D9C100BCE7A7 /* BreedsListPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
