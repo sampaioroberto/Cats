@@ -26,8 +26,8 @@ extension BreedsListInteractor: BreedsListInteracting {
                 self?.presenter.presentBreedsNames(
                     breeds.map { $0.name }
                 )
-            case .failure:
-                print("Handle error")
+            case let .failure(error):
+                print(error)
             }
         }
     }
