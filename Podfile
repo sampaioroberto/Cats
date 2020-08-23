@@ -6,5 +6,6 @@ target 'Cats' do
   pod 'Kingfisher', '~> 5.0'
   pod 'SnapKit', '~> 5.0'
   pod 'SwiftGen', '~> 6.0'
+  pod 'SwiftLint'
 
 end
