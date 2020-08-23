@@ -22,4 +22,6 @@ class ViewController<Interactor>: UIViewController, ViewConfiguration {
     func buildViewHierarchy() { }
     
     func setupConstraints() { }
+
+    func configureViews() { }
 }

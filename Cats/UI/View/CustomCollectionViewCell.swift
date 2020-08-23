@@ -9,7 +9,8 @@ final class CustomCollectionViewCell: UICollectionViewCell {
 
     private let textLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont.medium(weight: .bold)
+        label.textColor = .systemGray6
         return label
     }()
 
@@ -35,7 +36,7 @@ extension CustomCollectionViewCell: ViewConfiguration {
     }
 
     func configureViews() {
-        contentView.backgroundColor = .lightGray
+        contentView.backgroundColor = .systemIndigo
     }
 }
 

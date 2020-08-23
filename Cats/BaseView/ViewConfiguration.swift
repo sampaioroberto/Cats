@@ -1,6 +1,6 @@
 import Foundation
 
-public protocol ViewConfiguration: AnyObject {
+protocol ViewConfiguration: AnyObject {
     func buildViewHierarchy()
     func setupConstraints()
     func configureViews()
@@ -8,11 +8,11 @@ public protocol ViewConfiguration: AnyObject {
 }
 
 extension ViewConfiguration {
-    public func buildLayout() {
+    func buildLayout() {
         buildViewHierarchy()
         setupConstraints()
         configureViews()
     }
     
-    public func configureViews() { }
+    func configureViews() { }
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4D8F89D9D091C8A0B2E6D2AE /* Pods_Cats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB327071A0D10F63D035CDF /* Pods_Cats.framework */; };
 		AC1692E124F1E80D009114C2 /* ImageViewDownloadContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1692E024F1E80D009114C2 /* ImageViewDownloadContainerView.swift */; };
+		AC1692E424F209C6009114C2 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1692E324F209C6009114C2 /* Font.swift */; };
 		AC7B5CB924F1976100A031A5 /* WebServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B5CB824F1976100A031A5 /* WebServiceError.swift */; };
 		AC7B5CBB24F1977800A031A5 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B5CBA24F1977800A031A5 /* HTTPMethod.swift */; };
 		AC7B5CBD24F197A100A031A5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B5CBC24F197A100A031A5 /* API.swift */; };
@@ -48,6 +49,7 @@
 		028BCE6D24119AA4AD449AFA /* Pods-Cats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cats.release.xcconfig"; path = "Target Support Files/Pods-Cats/Pods-Cats.release.xcconfig"; sourceTree = "<group>"; };
 		3AB327071A0D10F63D035CDF /* Pods_Cats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1692E024F1E80D009114C2 /* ImageViewDownloadContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewDownloadContainerView.swift; sourceTree = "<group>"; };
+		AC1692E324F209C6009114C2 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		AC7B5CB824F1976100A031A5 /* WebServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceError.swift; sourceTree = "<group>"; };
 		AC7B5CBA24F1977800A031A5 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		AC7B5CBC24F197A100A031A5 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			children = (
 				AC88898824F0AD42002F94AC /* View+CornerRadius.swift */,
 				AC88898B24F0AEE4002F94AC /* Spacing.swift */,
+				AC1692E324F209C6009114C2 /* Font.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				AC7B5CCA24F1BAD800A031A5 /* BreedDetailViewController.swift in Sources */,
 				AC7B5CCC24F1BADF00A031A5 /* BreedDetailPresenter.swift in Sources */,
 				AC7B5CC524F1B90400A031A5 /* ErrorView.swift in Sources */,
+				AC1692E424F209C6009114C2 /* Font.swift in Sources */,
 				AC7B5CD224F1BAF700A031A5 /* BreedDetailInteractor.swift in Sources */,
 				AC7B5CD724F1C77A00A031A5 /* BreedSplitFactory.swift in Sources */,
 				AC7B5CD024F1BAF000A031A5 /* BreedDetailService.swift in Sources */,

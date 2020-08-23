@@ -35,11 +35,13 @@ final class BreedDetailViewController: ViewController<BreedDetailInteracting> {
     }()
 
     private let scrollView = UIScrollView()
+
     private let containerView = UIView()
     
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: view.bounds.width - 2*Spacing.space02, height: Layout.cellSize)
+        layout.minimumLineSpacing = Layout.minimunLineSpacing
 
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.register(
@@ -48,23 +50,25 @@ final class BreedDetailViewController: ViewController<BreedDetailInteracting> {
         )
         view.allowsSelection = false
         view.bounces = false
-        layout.minimumLineSpacing = Layout.minimunLineSpacing
         view.rounded()
+        view.backgroundColor = .systemGray6
         return view
     }()
 
     private lazy var containerDescriptionView: UIView = {
         let view = UIView()
-        view.backgroundColor = .lightGray
+        view.backgroundColor = .systemIndigo
         view.rounded()
         return view
     }()
 
     private lazy var descriptionLabel: UILabel = {
-        let view = UILabel(frame: .zero)
-        view.numberOfLines = Layout.numberOfLines
-        view.backgroundColor = .lightGray
-        return view
+        let label = UILabel(frame: .zero)
+        label.font = UIFont.medium()
+        label.textColor = .systemGray6
+        label.numberOfLines = Layout.numberOfLines
+        label.backgroundColor = .systemIndigo
+        return label
     }()
 
     private lazy var containerImageView = ImageViewDownloadContainerView()
@@ -115,8 +119,8 @@ final class BreedDetailViewController: ViewController<BreedDetailInteracting> {
         }
     }
 
-    func configureViews() {
-        view.backgroundColor = .white
+    override func configureViews() {
+        view.backgroundColor = .systemGray6
     }
 }
 
@@ -128,7 +132,7 @@ extension BreedDetailViewController: BreedDetailDisplay {
         var snapshot = Snapshot()
         snapshot.appendSections([.main])
         snapshot.appendItems(attributesItems)
-        dataSource.apply(snapshot, animatingDifferences: true)
+        dataSource.apply(snapshot, animatingDifferences: false)
 
         collectionView.snp.makeConstraints {
             $0.height.equalTo(Layout.cellSize * CGFloat(attributesItems.count))

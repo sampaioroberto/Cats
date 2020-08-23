@@ -5,6 +5,10 @@ final class BreedsSplitFactory {
         let splitViewController = UISplitViewController()
         let breedsListController = BreedsListFactory().make()
         let navigationController = UINavigationController(rootViewController: breedsListController)
+        navigationController.navigationBar.barTintColor = .systemIndigo
+        navigationController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.systemGray6]
+        navigationController.navigationBar.tintColor = .systemGray6
+        navigationController.navigationBar.isTranslucent = false
 
         splitViewController.viewControllers = [navigationController]
         splitViewController.preferredDisplayMode = .allVisible

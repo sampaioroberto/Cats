@@ -36,7 +36,7 @@ final class BreedsListViewController: ViewController<BreedsListInteracting> {
             CustomCollectionViewCell.self,
             forCellWithReuseIdentifier: String(describing: CustomCollectionViewCell.self)
         )
-        view.backgroundColor = .white
+        view.backgroundColor = .systemGray6
         view.delegate = self
         return view
     }()
@@ -65,8 +65,8 @@ final class BreedsListViewController: ViewController<BreedsListInteracting> {
         }
     }
 
-    func configureViews() {
-        view.backgroundColor = .white
+    override func configureViews() {
+        view.backgroundColor = .systemGray6
     }
 }
 

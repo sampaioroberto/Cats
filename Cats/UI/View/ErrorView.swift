@@ -20,7 +20,7 @@ final class ErrorView: UIView {
 
     private let descriptionLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 18)
+        label.font = UIFont.big()
         label.numberOfLines = 0
         label.textAlignment = .center
         return label
@@ -31,7 +31,7 @@ final class ErrorView: UIView {
         button.backgroundColor = .black
         button.rounded()
         button.setTitle(Strings.Error.tryAgain, for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        button.titleLabel?.font = UIFont.big(weight: .bold)
         button.addTarget(self, action: #selector(tryAgain), for: .touchUpInside)
         return button
     }()
