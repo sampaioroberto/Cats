@@ -7,6 +7,19 @@ PODS:
   - Kingfisher (5.14.1):
     - Kingfisher/Core (= 5.14.1)
   - Kingfisher/Core (5.14.1)
+  - OHHTTPStubs/Core (9.0.0)
+  - OHHTTPStubs/Default (9.0.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (9.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (9.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (9.0.0)
+  - OHHTTPStubs/Swift (9.0.0):
+    - OHHTTPStubs/Default
   - SnapKit (5.0.1)
   - SwiftGen (6.3.0)
   - SwiftLint (0.40.0)
@@ -15,6 +28,7 @@ DEPENDENCIES:
   - KIF
   - KIF/IdentifierTests
   - Kingfisher (~> 5.0)
+  - OHHTTPStubs/Swift
   - SnapKit (~> 5.0)
   - SwiftGen (~> 6.0)
   - SwiftLint
@@ -23,6 +37,7 @@ SPEC REPOS:
   trunk:
     - KIF
     - Kingfisher
+    - OHHTTPStubs
     - SnapKit
     - SwiftGen
     - SwiftLint
@@ -30,10 +45,11 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   KIF: 350f96fb4205972a10e4c1a45774d48b2d8482d8
   Kingfisher: 8050bc6f7f68cbf3908bd04df7ccbac188f6d6d6
+  OHHTTPStubs: cb29d2a9d09a828ecb93349a2b0c64f99e0db89f
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftGen: 3d5024a47ea79e408cded20763d7a17d18a4548c
   SwiftLint: 4154893c73a4c52d6240195507eb7a3e3c64087e
 
-PODFILE CHECKSUM: 7d7a57bbab013e1b15a67f6f39cc68fba01f790c
+PODFILE CHECKSUM: 1e261e43ff909a21c8ceb4d23aa8eb7ebf3ccb97
 
 COCOAPODS: 1.9.3

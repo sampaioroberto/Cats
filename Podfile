@@ -8,6 +8,10 @@ target 'Cats' do
   pod 'SwiftGen', '~> 6.0'
   pod 'SwiftLint'
 
+  target 'CatsTests' do
+    pod 'OHHTTPStubs/Swift'
+  end
+
   target 'CatsUITests' do
     pod 'KIF'
     pod 'KIF/IdentifierTests'
