@@ -1,3 +1,6 @@
+disabled_rules:
+  - trailing_whitespace
+
 opt_in_rules: # some rules are turned off by default, so you need to opt-in
   - empty_count # Find all the available rules by running: `swiftlint rules`
   - empty_parameters

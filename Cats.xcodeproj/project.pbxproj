@@ -10,13 +10,18 @@
 		4D8F89D9D091C8A0B2E6D2AE /* Pods_Cats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB327071A0D10F63D035CDF /* Pods_Cats.framework */; };
 		AC88890D24F07B10002F94AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88890C24F07B10002F94AC /* AppDelegate.swift */; };
 		AC88890F24F07B10002F94AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88890E24F07B10002F94AC /* SceneDelegate.swift */; };
-		AC88891124F07B10002F94AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88891024F07B10002F94AC /* ViewController.swift */; };
-		AC88891424F07B10002F94AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC88891224F07B10002F94AC /* Main.storyboard */; };
 		AC88891624F07B12002F94AC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC88891524F07B12002F94AC /* Images.xcassets */; };
 		AC88891924F07B12002F94AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC88891724F07B12002F94AC /* LaunchScreen.storyboard */; };
 		AC88892324F0815C002F94AC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC88892224F0815C002F94AC /* Localizable.strings */; };
 		AC88894824F08316002F94AC /* Strings.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88894624F08316002F94AC /* Strings.generated.swift */; };
 		AC88894924F08316002F94AC /* Assets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88894724F08316002F94AC /* Assets.generated.swift */; };
+		AC88894F24F08806002F94AC /* BreedsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88894E24F08806002F94AC /* BreedsListViewController.swift */; };
+		AC88897224F089B2002F94AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88897124F089B2002F94AC /* ViewController.swift */; };
+		AC88897424F089E6002F94AC /* ViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88897324F089E6002F94AC /* ViewConfiguration.swift */; };
+		AC88897624F08B1F002F94AC /* BreedsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88897524F08B1F002F94AC /* BreedsListInteractor.swift */; };
+		AC88897824F08B87002F94AC /* BreedsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88897724F08B87002F94AC /* BreedsListPresenter.swift */; };
+		AC88897A24F08C0F002F94AC /* BreedsListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88897924F08C0F002F94AC /* BreedsListCoordinator.swift */; };
+		AC88897C24F08D23002F94AC /* BreedsListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88897B24F08D23002F94AC /* BreedsListFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,14 +30,19 @@
 		AC88890924F07B10002F94AC /* Cats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC88890C24F07B10002F94AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC88890E24F07B10002F94AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AC88891024F07B10002F94AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AC88891324F07B10002F94AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC88891524F07B12002F94AC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AC88891824F07B12002F94AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC88891A24F07B12002F94AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC88892224F0815C002F94AC /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		AC88894624F08316002F94AC /* Strings.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.generated.swift; sourceTree = "<group>"; };
 		AC88894724F08316002F94AC /* Assets.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.generated.swift; sourceTree = "<group>"; };
+		AC88894E24F08806002F94AC /* BreedsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListViewController.swift; sourceTree = "<group>"; };
+		AC88897124F089B2002F94AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AC88897324F089E6002F94AC /* ViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConfiguration.swift; sourceTree = "<group>"; };
+		AC88897524F08B1F002F94AC /* BreedsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListInteractor.swift; sourceTree = "<group>"; };
+		AC88897724F08B87002F94AC /* BreedsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListPresenter.swift; sourceTree = "<group>"; };
+		AC88897924F08C0F002F94AC /* BreedsListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListCoordinator.swift; sourceTree = "<group>"; };
+		AC88897B24F08D23002F94AC /* BreedsListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListFactory.swift; sourceTree = "<group>"; };
 		DD4944DA802AA4E0F65E4A3A /* Pods-Cats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cats.debug.xcconfig"; path = "Target Support Files/Pods-Cats/Pods-Cats.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,11 +96,11 @@
 		AC88890B24F07B10002F94AC /* Cats */ = {
 			isa = PBXGroup;
 			children = (
+				AC88897024F0899A002F94AC /* Helpers */,
+				AC88894B24F087C0002F94AC /* Scenes */,
 				AC88892124F08114002F94AC /* Resources */,
 				AC88890C24F07B10002F94AC /* AppDelegate.swift */,
 				AC88890E24F07B10002F94AC /* SceneDelegate.swift */,
-				AC88891024F07B10002F94AC /* ViewController.swift */,
-				AC88891224F07B10002F94AC /* Main.storyboard */,
 				AC88891724F07B12002F94AC /* LaunchScreen.storyboard */,
 				AC88891A24F07B12002F94AC /* Info.plist */,
 			);
@@ -114,6 +124,35 @@
 				AC88894624F08316002F94AC /* Strings.generated.swift */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		AC88894B24F087C0002F94AC /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				AC88894C24F087CE002F94AC /* BreedsList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		AC88894C24F087CE002F94AC /* BreedsList */ = {
+			isa = PBXGroup;
+			children = (
+				AC88894E24F08806002F94AC /* BreedsListViewController.swift */,
+				AC88897724F08B87002F94AC /* BreedsListPresenter.swift */,
+				AC88897524F08B1F002F94AC /* BreedsListInteractor.swift */,
+				AC88897924F08C0F002F94AC /* BreedsListCoordinator.swift */,
+				AC88897B24F08D23002F94AC /* BreedsListFactory.swift */,
+			);
+			path = BreedsList;
+			sourceTree = "<group>";
+		};
+		AC88897024F0899A002F94AC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AC88897124F089B2002F94AC /* ViewController.swift */,
+				AC88897324F089E6002F94AC /* ViewConfiguration.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,7 +220,6 @@
 				AC88891924F07B12002F94AC /* LaunchScreen.storyboard in Resources */,
 				AC88892324F0815C002F94AC /* Localizable.strings in Resources */,
 				AC88891624F07B12002F94AC /* Images.xcassets in Resources */,
-				AC88891424F07B10002F94AC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,25 +308,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC88891124F07B10002F94AC /* ViewController.swift in Sources */,
+				AC88894F24F08806002F94AC /* BreedsListViewController.swift in Sources */,
+				AC88897A24F08C0F002F94AC /* BreedsListCoordinator.swift in Sources */,
 				AC88894824F08316002F94AC /* Strings.generated.swift in Sources */,
+				AC88897624F08B1F002F94AC /* BreedsListInteractor.swift in Sources */,
 				AC88890D24F07B10002F94AC /* AppDelegate.swift in Sources */,
+				AC88897C24F08D23002F94AC /* BreedsListFactory.swift in Sources */,
+				AC88897224F089B2002F94AC /* ViewController.swift in Sources */,
+				AC88897424F089E6002F94AC /* ViewConfiguration.swift in Sources */,
 				AC88890F24F07B10002F94AC /* SceneDelegate.swift in Sources */,
 				AC88894924F08316002F94AC /* Assets.generated.swift in Sources */,
+				AC88897824F08B87002F94AC /* BreedsListPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AC88891224F07B10002F94AC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AC88891324F07B10002F94AC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AC88891724F07B12002F94AC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

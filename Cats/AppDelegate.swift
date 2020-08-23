@@ -1,10 +1,4 @@
-//
-//  AppDelegate.swift
-//  Cats
-//
-//  Created by Roberto Sampaio on 21/08/20.
-//  Copyright © 2020 Roberto Sampaio. All rights reserved.
-//
+// swiftlint:disable all
 
 import UIKit
 
