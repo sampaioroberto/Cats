@@ -97,7 +97,7 @@ extension BreedsListViewController: UICollectionViewDelegateFlowLayout {
 // MARK: - UICollectionViewDelegate
 extension BreedsListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        interactor.goToBreedDetailsWithItemIndex(item: indexPath.item)
+        interactor.didSelectItem(indexPath.item)
     }
 }
 

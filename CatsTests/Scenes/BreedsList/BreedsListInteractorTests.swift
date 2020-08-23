@@ -122,13 +122,13 @@ final class BreedsListInteractorTests: XCTestCase {
         XCTAssertEqual(fakeMessage, Strings.Error.Breeds.internetConnection)
     }
 
-    // MARK: - goToBreedDetailsWithItemIndex
-    func testGoToBreedDetailsWithItemIndex_ShouldCallPresentDetailsWithBreed() throws {
+    // MARK: - didSelectItem
+    func testDidSelectItem_ShouldCallPresentDetailsWithBreed() throws {
         service.result = .success(breeds)
         interactor.requestBreeds()
         let itemIndex = 0
 
-        interactor.goToBreedDetailsWithItemIndex(item: itemIndex)
+        interactor.didSelectItem(itemIndex)
 
         let fakeBreed = try XCTUnwrap(presenter.breed)
 
