@@ -19,17 +19,18 @@ extension BreedsListInteractor: BreedsListInteracting {
     func requestBreeds() {
         presenter.presentLoading()
         service.requestBreeds { [weak self] result in
-            self?.presenter.hideLoading()
+            guard let self = self else { return }
+            self.presenter.hideLoading()
             switch result {
             case let .success(breeds):
-                self?.breeds = breeds
-                self?.presenter.presentBreeds(breeds)
+                self.breeds = breeds
+                self.presenter.presentBreeds(breeds)
             case let .failure(error):
                 switch error {
                 case .notConnectedToInternet, .timedOut:
-                    self?.presenter.presentErrorWithMessage(Strings.Error.Breeds.internetConnection)
+                    self.presenter.presentErrorWithMessage(Strings.Error.Breeds.internetConnection)
                 default:
-                    self?.presenter.presentErrorWithMessage(Strings.Error.Breeds.serverError)
+                    self.presenter.presentErrorWithMessage(Strings.Error.Breeds.serverError)
                 }
             }
         }

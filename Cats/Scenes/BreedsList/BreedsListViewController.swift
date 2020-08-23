@@ -111,72 +111,14 @@ extension BreedsListViewController: BreedsListDisplay {
     }
 
     func displayErrorWithMessage(_ message: String) {
-        let errorView = ErrorView(errorMessage: message)
+        let errorView = ErrorView(errorMessage: message) { [weak self] in
+            self?.interactor.requestBreeds()
+        }
         collectionView.backgroundView = errorView
         errorView.snp.makeConstraints {
             $0.height.equalTo(collectionView.snp.height).dividedBy(2)
             $0.width.equalTo(collectionView.snp.width).dividedBy(1.5)
             $0.center.equalToSuperview()
         }
-    }
-}
-
-final class ErrorView: UIView {
-    private let stackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.distribution = .fill
-        stackView.spacing = Spacing.space01
-        return stackView
-    }()
-
-    private let imageView: UIImageView = {
-        let view = UIImageView(image: Assets.errorCat.image)
-        view.contentMode = .scaleAspectFit
-        return view
-    }()
-
-    private let descriptionLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 18)
-        label.numberOfLines = 0
-        label.textAlignment = .center
-        return label
-    }()
-
-    private let errorButton: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = .black
-        button.rounded()
-        button.setTitle("Try again", for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-        return button
-    }()
-
-    init(frame: CGRect = .zero, errorMessage: String) {
-        super.init(frame: frame)
-        descriptionLabel.text = errorMessage
-        buildLayout()
-    }
-
-    @available(*, unavailable)
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
-
-extension ErrorView: ViewConfiguration {
-    func buildViewHierarchy() {
-        addSubview(stackView)
-        stackView.addArrangedSubview(imageView)
-        stackView.addArrangedSubview(descriptionLabel)
-        stackView.addArrangedSubview(errorButton)
-    }
-
-    func setupConstraints() {
-        stackView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-        }
-        imageView.snp.contentCompressionResistanceVerticalPriority = 250
     }
 }

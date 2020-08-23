@@ -14,6 +14,8 @@ internal enum Strings {
   internal static let breeds = Strings.tr("Localizable", "breeds")
 
   internal enum Error {
+    /// Try again
+    internal static let tryAgain = Strings.tr("Localizable", "Error.tryAgain")
     internal enum Breeds {
       /// Meeeow, there's some internet issues. Please check if you have internet connection and try again
       internal static let internetConnection = Strings.tr("Localizable", "Error.Breeds.internetConnection")
