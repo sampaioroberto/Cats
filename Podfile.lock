@@ -1,4 +1,5 @@
 PODS:
+  - Keys (1.0.1)
   - KIF (3.7.9):
     - KIF/Core (= 3.7.9)
   - KIF/Core (3.7.9)
@@ -25,6 +26,7 @@ PODS:
   - SwiftLint (0.40.0)
 
 DEPENDENCIES:
+  - Keys (from `Pods/CocoaPodsKeys`)
   - KIF
   - KIF/IdentifierTests
   - Kingfisher (~> 5.0)
@@ -42,7 +44,12 @@ SPEC REPOS:
     - SwiftGen
     - SwiftLint
 
+EXTERNAL SOURCES:
+  Keys:
+    :path: Pods/CocoaPodsKeys
+
 SPEC CHECKSUMS:
+  Keys: a576f4c9c1c641ca913a959a9c62ed3f215a8de9
   KIF: 350f96fb4205972a10e4c1a45774d48b2d8482d8
   Kingfisher: 8050bc6f7f68cbf3908bd04df7ccbac188f6d6d6
   OHHTTPStubs: cb29d2a9d09a828ecb93349a2b0c64f99e0db89f
@@ -50,6 +57,6 @@ SPEC CHECKSUMS:
   SwiftGen: 3d5024a47ea79e408cded20763d7a17d18a4548c
   SwiftLint: 4154893c73a4c52d6240195507eb7a3e3c64087e
 
-PODFILE CHECKSUM: 1e261e43ff909a21c8ceb4d23aa8eb7ebf3ccb97
+PODFILE CHECKSUM: 58679cf7236ab11e23c261af57f7cc21018ef0a9
 
 COCOAPODS: 1.9.3

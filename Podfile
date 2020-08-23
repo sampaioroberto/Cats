@@ -1,5 +1,7 @@
 platform :ios, '13.0'
 
+plugin 'cocoapods-keys'
+
 target 'Cats' do
   use_frameworks!
 

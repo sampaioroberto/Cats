@@ -1,5 +1,7 @@
 import Foundation
 
+import Keys
+
 enum Path: String {
     case breeds
     case images = "images/search"
@@ -10,7 +12,7 @@ struct API {
     private let version = "v1"
 
     static let headerKey = "x-api-key"
-    static let key = ""
+    static let key = CatsKeys().apiCatsSecret
 
     private let path: Path
 
